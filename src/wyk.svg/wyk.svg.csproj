@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>Sunbird WYK</Company>
+    <Authors>Sunbird WYK</Authors>
+    <Copyright>Copyright © Sunbird WYK 2019</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <OutputPath>..\..\PublicLib\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fizzler" Version="1.2.0" />
+    <PackageReference Include="Svg" Version="3.0.102" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\wyk.basic\wyk.basic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>

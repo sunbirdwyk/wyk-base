@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED6A08EA-B8F0-4A55-8010-AFA2410B6D64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wyk.db.fw</RootNamespace>
+    <AssemblyName>wyk.db.fw</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\PublicLib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form\FrmDBConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FrmDBConnection.Designer.cs">
+      <DependentUpon>FrmDBConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\FrmDBConnectionEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FrmDBConnectionEx.Designer.cs">
+      <DependentUpon>FrmDBConnectionEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionAccess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionAccess.Designer.cs">
+      <DependentUpon>UCDBConnectionAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionBase.Designer.cs">
+      <DependentUpon>UCDBConnectionBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionOracle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionOracle.Designer.cs">
+      <DependentUpon>UCDBConnectionOracle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionMySql.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionMySql.Designer.cs">
+      <DependentUpon>UCDBConnectionMySql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionSqlServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\UCDBConnectionSqlServer.Designer.cs">
+      <DependentUpon>UCDBConnectionSqlServer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="form\FrmDBConnection.resx">
+      <DependentUpon>FrmDBConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\FrmDBConnectionEx.resx">
+      <DependentUpon>FrmDBConnectionEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\UCDBConnectionAccess.resx">
+      <DependentUpon>UCDBConnectionAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\UCDBConnectionBase.resx">
+      <DependentUpon>UCDBConnectionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\UCDBConnectionOracle.resx">
+      <DependentUpon>UCDBConnectionOracle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\UCDBConnectionMySql.resx">
+      <DependentUpon>UCDBConnectionMySql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\UCDBConnectionSqlServer.resx">
+      <DependentUpon>UCDBConnectionSqlServer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wyk.basic\wyk.basic.csproj">
+      <Project>{7c91ee40-4a09-4f36-820c-e054c404cd7e}</Project>
+      <Name>wyk.basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\wyk.db\wyk.db.csproj">
+      <Project>{a76187ad-8cb2-4c16-a47a-4b61a1f3c769}</Project>
+      <Name>wyk.db</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\wyk.ui.forms\wyk.ui.forms.csproj">
+      <Project>{b4c0d08e-2bcf-4808-8ea6-ee12aea9babe}</Project>
+      <Name>wyk.ui.forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\folder.png" />
+    <Content Include="Resources\refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
